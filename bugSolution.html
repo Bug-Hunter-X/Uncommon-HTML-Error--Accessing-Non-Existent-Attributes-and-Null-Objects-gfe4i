@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv" data-myattribute="My Value">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Check for null before accessing attributes
+    let myDiv = document.getElementById("myDiv");
+    let attributeValue = myDiv ? myDiv.getAttribute("data-myattribute") : null;
+    console.log(attributeValue); //Outputs "My Value"
+
+    //Safely access element properties, checking for null first
+    let element = document.querySelector("#myDiv");
+    if(element){
+        console.log(element.textContent);
+    } else {
+        console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
