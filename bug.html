@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Attempt to access a non-existent attribute
+    let text = document.getElementById("myDiv").getAttribute("data-nonexistent");
+    console.log(text); // Outputs null
+    //Another example of accessing a property of a null object
+    let element = document.querySelector("#nonExistentElement");
+    if(element){
+        console.log(element.textContent);
+    } else {
+        console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
